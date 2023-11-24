@@ -76,6 +76,22 @@
     </div>
     <div id="content">
         <h1>Documentos de requisitos</h1>
+        <h2>Descrição geral do sistema</h2>
+        <p><span class="first-letter"></span>O Arbocontrol é um sistema destinado ao gerenciamento de denúncias de casos
+            de arboviroses em Juiz de Fora.
+            Composto por dois módulos principais, o primeiro consiste em um formulário que permite ao público registrar
+            denúncias de locais suspeitos.
+            </br><span class="first-letter"></span> O segundo módulo, um dashboard, é exclusivo para profissionais da
+            prefeitura,
+            proporcionando informações abrangentes para a visualização e organização eficiente das denúncias
+            registradas.
+
+            </br><span class="first-letter"></span>O módulo de dashboard diferencia dois níveis de acesso: "user" e
+            "admin". Usuários têm permissão para
+            visualizar denúncias, informações gráficas relevantes e modificar os status das denúncias. Administradores,
+            além dessas funcionalidades, têm acesso completo aos CRUDs de "status de denúncias", "locais favoráveis",
+            "FAQ" e "usuários".
+        </p>
         <h2>Requisitos funcionais do sistema [RFs]</h2>
         <h3>Módulo de Registro de denúncias</h3>
         <div>
@@ -92,8 +108,11 @@
                     <tr>
                         <td>RF01</td>
                         <td>O sistema deve permitir que qualquer usuário registre uma denúncia de possível foco de
-                            arbovirose com: CEP, Logradouro, Bairro, Número, Complemento, Referencia, telefone celular
-                            (Opcional), telefone fixo (Opcional), e-mail, imagem, local favorável de foco e observações
+                            arbovirose com: CEP, Logradouro, Bairro, Número, Complemento(Opcional),
+                            Referencia(Opcional), telefone celular
+                            (Opcional), telefone fixo (Opcional), e-mail(Opcional), imagem(Opcional), local favorável de
+                            foco e
+                            observações(Opcional)
                             (Opcional).</td>
                     </tr>
                 </tbody>
@@ -111,14 +130,16 @@
                     <tr>
                         <td>RF02</td>
                         <td>O sistema deve gerar código de protocolo a partir do número da denúncia, data e horário ao
-                            iniciar o formulário de uma denúncia. </td>
+                            iniciar o formulário de uma denúncia. Esse protocolos devem únicos para identificar a
+                            denúncia realizada.</td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF03----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Área de perguntas frequentes<span>Atualização: 11/06/2023</span></caption>
+                    <caption>O sistema deve buscar o endereço a partir do cep informado no formulário.<span>Atualização:
+                            11/06/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -127,12 +148,48 @@
                 <tbody>
                     <tr>
                         <td>RF03</td>
-                        <td>O sistema deve apresentar uma área destinada a perguntas mais frequentes sobre como
-                            registrar uma denúncia. </td>
+                        <td>O sistema deve preencher os campos: cidade, bairro, logradouro automaticamente a partir do
+                            cep informado pelo usuário.</td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF04----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>O sistema deve permitir que o usuário envie imagens do local favorável<span>Atualização:
+                            11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF04</td>
+                        <td>O sistema deve permitir que o usuário anexe uma imagem de até 2mb do local favoravel a
+                            partir dos arquivos contidos em seu dispositivo.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF05----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Seleção de Local favorável<span>Atualização:
+                            11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF05</td>
+                        <td>O sistema deve permitir que o usuário selecione um tipo de local favoravel a partir de uma
+                            caixa de seleção no formulário.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF06----------------------------------------------------------------------------- -->
             <table>
                 <thead>
                     <caption>Área com informações de atendimento<span>Atualização: 11/06/2023</span></caption>
@@ -143,18 +200,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>RF04</td>
+                        <td>RF06</td>
                         <td>O sistema deve apresentar uma área com informações sobre horários de atendimento, número de
                             telefone, Email e endereço dos órgãos responsáveis pela Vigilância Epidemiológica do
                             município.</td>
                     </tr>
                 </tbody>
             </table>
-            <!-- -RF05----------------------------------------------------------------------------- -->
-
+            <!-- -RF07----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Nota de desenvolvimento<span>Atualização: 31/08/2023</span></caption>
+                    <caption>Redirecionamento para o dashboard<span>Atualização: 10/09/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -162,13 +218,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>RF05</td>
-                        <td>O sistema deve disponibilizar uma nota de desenvolvimento para o público.</td>
+                        <td>RF07</td>
+                        <td>O sistema deve apresentar um link que redirecione para a página de login do dashboard.</td>
                     </tr>
                 </tbody>
             </table>
-            <!-- -RF06----------------------------------------------------------------------------- -->
-            <h3>Módulo de administradores do sistema</h3>
+            <h3>Módulo de Registro de denúncias</h3>
+            <!-- -RF08----------------------------------------------------------------------------- -->
+            <h3></h3>
             <table>
                 <thead>
                     <caption>Autenticação de acesso<span>Atualização: 11/06/2023</span></caption>
@@ -179,50 +236,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>RF06</td>
+                        <td>RF08</td>
                         <td>O sistema deve garantir que somente os usuários autorizados acessem o módulo de
                             administradores do sistema.</td>
                     </tr>
                 </tbody>
             </table>
-            <!-- -RF07----------------------------------------------------------------------------- -->
-            <table>
-                <thead>
-                    <caption>Exibir o número total de denúncias<span>Atualização: 11/06/2023</span></caption>
-                    <tr>
-                        <th class="requisito-funcional">RF</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>RF07</td>
-                        <td>O sistema deve apresentar o total de denúncias registradas para fornecer uma visão geral do
-                            volume de casos relatados.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- -RF08----------------------------------------------------------------------------- -->
-            <table>
-                <thead>
-                    <caption>Exibir o número de denúncias pendentes<span>Atualização: 11/06/2023</span></caption>
-                    <tr>
-                        <th class="requisito-funcional">RF</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>RF08</td>
-                        <td>Deve ser exibido o número de denúncias em espera de atendimento ou análise pelos
-                            funcionários da prefeitura.</td>
-                    </tr>
-                </tbody>
-            </table>
             <!-- -RF09----------------------------------------------------------------------------- -->
+            <h3></h3>
             <table>
                 <thead>
-                    <caption>Exibir o número de denúncias finalizadas<span>Atualização: 11/06/2023</span></caption>
+                    <caption>Autenticação de acesso<span>Atualização: 11/06/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -231,15 +255,15 @@
                 <tbody>
                     <tr>
                         <td>RF09</td>
-                        <td>O sistema deve mostrar quantas denúncias foram concluídas ou encerradas após tratamento ou
-                            ação adequada, indicando o progresso das denúncias e as medidas tomadas.</td>
+                        <td>O sistema deve garantir que somente os usuários autorizados acessem o módulo de
+                            administradores do sistema.</td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF10----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Exibir o número de denúncias em atendimento<span>Atualização: 11/06/2023</span></caption>
+                    <caption>CRUD usuários<span>Atualização: 10/08/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -248,34 +272,16 @@
                 <tbody>
                     <tr>
                         <td>RF10</td>
-                        <td>Deve ser apresentado o número de denúncias em processo de análise ou tratamento ativo pelos
-                            funcionários responsáveis, fornecendo informações em tempo real sobre as denúncias sendo
-                            atendidas.</td>
+                        <td>O sistema deve viabilizar que os administradores criem ou excluam usuários, utilizando os
+                            seguintes campos como referência: nome, e-mail, senha e permissão de acesso (user ou admin).
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF11----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Exibir o número de denúncias inválidas<span>Atualização: 11/06/2023</span></caption>
-                    <tr>
-                        <th class="requisito-funcional">RF</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>RF11</td>
-                        <td>O sistema deve apresentar a quantidade de denúncias consideradas inválidas ou não
-                            relacionadas às arboviroses, auxiliando na filtragem de denúncias não relevantes para o
-                            monitoramento.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- -RF12----------------------------------------------------------------------------- -->
-            <table>
-                <thead>
-                    <caption>Exibir um gráfico de denúncias registradas ao longo do ano<span>Atualização:
+                    <caption>Alteração de senha<span>Atualização:
                             11/06/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
@@ -284,18 +290,36 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td>RF11</td>
+                        <td>O sistema deve oferecer a funcionalidade de alteração de senha, permitindo que o usuário
+                            realize essa ação mediante o envio de um token para o seu e-mail. Esse token enviado servirá
+                            como uma verificação segura para garantir a autenticidade do solicitante.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF12----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>CRUD Local favoravel<span>Atualização: 11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
                         <td>RF12</td>
-                        <td>O sistema deve fornecer um gráfico que ilustre o número de denúncias registradas em cada
-                            período ao longo do ano, auxiliando na identificação de possíveis tendências ou
-                            sazonalidades nas denúncias.</td>
+                        <td>O sistema deve capacitar os usuários com permissões de "admin" a realizar operações de
+                            criação, alteração, visualização e exclusão dos locais favoráveis, utilizando como
+                            referência o nome do local favorável.</td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF13----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Exibir um gráfico de denúncias registradas por região<span>Atualização: 11/06/2023</span>
-                    </caption>
+                    <caption>CRUD status de denúncia<span>Atualização: 11/06/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -304,13 +328,102 @@
                 <tbody>
                     <tr>
                         <td>RF13</td>
-                        <td>O sistema deve apresentar um gráfico que mostre a distribuição geográfica das denúncias,
-                            agrupadas por região, permitindo uma análise visual das áreas com maior incidência de
-                            arboviroses.</td>
+                        <td>O sistema deve possibilitar que os administradores criem, alterem, visualizem ou excluam os
+                            diferentes status possíveis de uma denúncia, utilizando como referência os seguintes campos:
+                            nome do status e descrição do status.
+                        </td>
                     </tr>
                 </tbody>
             </table>
             <!-- -RF14----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Visualização das denúncias<span>Atualização: 11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF14</td>
+                        <td>O sistema deve permitir que os usuários com permissão de "users" ou "admin" visualizem e
+                            alterem o
+                            status de uma denúncia.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF15----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Enviar emails ao alterar uma denúncia<span>Atualização: 11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF15</td>
+                        <td>
+                            O sistema deve enviar um e-mail para o denunciante, informando o protocolo, o status
+                            atual e a descrição da denúncia realizada.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF15----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Exibir o número de denúncias por status<span>Atualização: 11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF15</td>
+                        <td>O sistema deve exibir o número de denúncias por status</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF16----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Exibir o número de denúncias por local favoravel<span>Atualização: 11/06/2023</span>
+                    </caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF16</td>
+                        <td>O sistema deve exibir o número de denúncias por local favoravel</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF17----------------------------------------------------------------------------- -->
+            <table>
+                <thead>
+                    <caption>Exibir o número de denúncias realizadas no ultimos 7 dias</span>Atualização:
+                        11/06/2023</span></caption>
+                    <tr>
+                        <th class="requisito-funcional">RF</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RF17</td>
+                        <td>O sistema deve apresentar o número de denúncias realizadas nos últimos 7 dias.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -RF18----------------------------------------------------------------------------- -->
             <table>
                 <thead>
                     <caption>Exibir uma representação gráfica do status das denúncias<span>Atualização:
@@ -322,17 +435,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>RF14</td>
+                        <td>RF18</td>
                         <td>O sistema deve fornecer uma visualização gráfica que indique a proporção de denúncias
                             pendentes, finalizadas, em atendimento e inválidas, permitindo entender a distribuição das
                             denúncias de acordo com o status atual.</td>
                     </tr>
                 </tbody>
             </table>
-            <!-- -RF15----------------------------------------------------------------------------- -->
+
+            <!-- -RF19----------------------------------------------------------------------------- -->
             <table>
                 <thead>
-                    <caption>Listagem de denúncias<span>Atualização: 11/06/2023</span></caption>
+                    <caption>O sistema deve permitir o cadastro de perguntas e responstas FAQ<span>Atualização:
+                            10/11/2023</span></caption>
                     <tr>
                         <th class="requisito-funcional">RF</th>
                         <th>Descrição</th>
@@ -340,26 +455,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>RF15</td>
-                        <td>O sistema deve listar todas as denuncias cadastradas no sistema e permitir que o usuário
-                            pesquise por uma denúncia a partir do CEP, Logradouro ou Bairro.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- -RF16----------------------------------------------------------------------------- -->
-            <table>
-                <thead>
-                    <caption>Visualização de uma denúncia<span>Atualização: 11/06/2023</span></caption>
-                    <tr>
-                        <th class="requisito-funcional">RF</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>RF16</td>
-                        <td>O sistema deve permitir que o usuário administrador visualize todos os campos de uma
-                            denúncia.</td>
+                        <td>RF19</td>
+                        <td>O sistema deve permitir que os administradores do sistema cadastrem perguntas e respostas
+                            para a area de FAQ do formulário de denúncias.</td>
                     </tr>
                 </tbody>
             </table>
