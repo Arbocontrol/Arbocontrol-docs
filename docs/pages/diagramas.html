@@ -12,9 +12,24 @@
 </head>
 <style>
     #image-area {
+        margin-top: 1em;
         display: flex;
         justify-content: center;
         background-color: white;
+    }
+
+    #download-button {
+        background-color: rgb(37, 202, 37);
+        padding: 0.5em;
+        margin-top: 1em;
+        color: white;
+        border-radius: 0.2em;
+        text-decoration: none;
+
+    }
+
+    #download-button img {
+        width: 1em;
     }
 </style>
 
@@ -38,12 +53,17 @@
             <li><a href="prototipagem.html"><img src="../assets/prototipagem.png"><span>Prototipagem</span></span></a>
             </li>
             <li><a href="historico.html"><img src="../assets/task.png"><span>Histórico</span></span></a></li>
+            <li><a href="testes.html"><img src="../assets/test.png"><span>Testes</span></span></a></li>
             <li><a href="*"><img src="../assets/deployment.png"><span>Implantação</span></span></a></li>
         </ul>
     </div>
     <div id="content">
         <h1>Diagramas</h1>
         <h2>Diagrama de classes</h2>
+        <a id="download-button" href="../documents/class-diagram.mdj">
+            <span>Download do arquivo class-diagram.mdj</span>
+            <img src="../assets/download-icon.png" alt="Download-img">
+        </a>
         <div id="image-area">
             <img src="../assets/class-diagram.png">
         </div>

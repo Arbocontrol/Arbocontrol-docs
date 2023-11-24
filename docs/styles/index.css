@@ -11,11 +11,9 @@ body {
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(231, 231, 231, 1) 100%
-  );
+  background: linear-gradient(100deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(231, 231, 231, 1) 100%);
 }
 
 #content {
@@ -32,6 +30,7 @@ body {
 
 #content h2 {
   margin-top: 2em;
+  margin-bottom: 1em;
   color: rgb(37, 202, 37);
 }
 
@@ -45,7 +44,8 @@ body {
 }
 
 #content p span.first-letter {
-  margin-right: 3em; /* Adicione o valor desejado para o espaçamento antes da primeira letra */
+  margin-right: 3em;
+  /* Adicione o valor desejado para o espaçamento antes da primeira letra */
 }
 
 #content hr {
